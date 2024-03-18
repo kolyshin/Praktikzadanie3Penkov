@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/countrep"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="136dp"
+        android:text="50"
+        app:layout_constraintEnd_toStartOf="@+id/viewsimg"
+        app:layout_constraintTop_toBottomOf="@+id/barrier2" />
+
+    <ImageView
+        android:id="@+id/iconview"
+        android:layout_width="93dp"
+        android:layout_height="84dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo"
+        android:contentDescription="@string/todo" />
+
+    <TextView
+        android:id="@+id/NewsHeader"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_weight="1"
+        android:text="@string/news"
+        android:textColor="#3F51B5"
+        app:layout_constraintEnd_toStartOf="@+id/treecircle"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/iconview"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/DateHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="124dp"
+        android:layout_weight="1"
+        android:text="@string/date"
+        android:textColor=" #808080"
+        app:layout_constraintEnd_toStartOf="@+id/treecircle"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/iconview"
+        app:layout_constraintTop_toBottomOf="@+id/NewsHeader" />
+
+    <ImageButton
+        android:id="@+id/treecircle"
+        android:layout_width="40dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="35dp"
+        android:layout_weight="1"
+        android:src="@drawable/baseline_reorder_24"
+        app:layout_constraintBottom_toTopOf="@+id/barrier"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/NewsHeader"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/barrier"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="10dp"
+        android:background="#A2A0A3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/DateHeader" />
+
+    <TextView
+        android:id="@+id/Description"
+        android:layout_width="373dp"
+        android:layout_height="355dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="45dp"
+
+        android:ellipsize="none"
+        android:maxLines="100"
+        android:text="@string/description"
+
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/barrier" />
+    <View
+        android:id="@+id/barrier2"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="10dp"
+        android:background="#A2A0A3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Description" />
+
+    <ImageButton
+        android:id="@+id/repostbnt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="8dp"
+        android:background="@null"
+        app:layout_constraintStart_toEndOf="@+id/countlikes"
+        app:layout_constraintTop_toBottomOf="@+id/barrier2"
+        app:srcCompat="@drawable/rep" />
+
+    <TextView
+        android:id="@+id/countviews"
+        android:layout_width="13dp"
+        android:layout_height="16dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="24dp"
+        android:text="5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/viewsimg"
+        app:layout_constraintTop_toBottomOf="@+id/barrier2" />
+
+    <ImageButton
+        android:id="@+id/likebnt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="54dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="33dp"
+        android:background="@null"
+        app:layout_constraintEnd_toStartOf="@+id/repostbnt"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/barrier2"
+        app:srcCompat="@drawable/like" />
+
+    <ImageButton
+        android:id="@+id/viewsimg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="176dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="52dp"
+        android:background="@null"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.8"
+        app:layout_constraintStart_toEndOf="@+id/repostbnt"
+        app:layout_constraintTop_toBottomOf="@+id/barrier2"
+        app:srcCompat="@drawable/glazz" />
+
+    <TextView
+        android:id="@+id/countlikes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="12dp"
+        android:text="100"
+        app:layout_constraintEnd_toStartOf="@+id/repostbnt"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/likebnt"
+        app:layout_constraintTop_toBottomOf="@+id/barrier2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
